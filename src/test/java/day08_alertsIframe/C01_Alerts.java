@@ -34,7 +34,8 @@ public class C01_Alerts {
            js alert'ler locate edilemez
            Selenium'da JS alert'ler icin ozel bir yontem gelistirmistir
          */
-        driver.get("https://the-internet.herokuapp.com/javascript_alerts ");
+
+       driver.get("https://the-internet.herokuapp.com/javascript_alerts ");
         driver.findElement(By.xpath("//*[text()='Click for JS Alert']")).click();
         // alert'te OK tusuna basin
         driver.switchTo().alert().accept();

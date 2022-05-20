@@ -12,7 +12,8 @@ import java.util.Set;
 public class C03_Actions extends TestBase {
     @Test
     public void test01(){
-        // 1- Yeni bir class olusturalim: MouseActions1
+
+      // 1- Yeni bir class olusturalim: MouseActions1
         //2- https://the-internet.herokuapp.com/context_menu sitesine gidelim
         driver.get("https://the-internet.herokuapp.com/context_menu");
         //3- Cizili alan uzerinde sag click yapalim

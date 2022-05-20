@@ -20,9 +20,9 @@ public class C04_Actions extends TestBase {
 
         //2- “Drag me” butonunu tutup “Drop here” kutusunun ustune birakalim
         Actions actions=new Actions(driver);
-        WebElement tasnacakElement= driver.findElement(By.xpath("//div[@id='draggable']"));
+        WebElement tasinacakElement= driver.findElement(By.xpath("//div[@id='draggable']"));
         WebElement hedefElement= driver.findElement(By.xpath("//div[@id='droppable'][1]"));
-        actions.dragAndDrop(tasnacakElement,hedefElement).perform();
+        actions.dragAndDrop(tasinacakElement,hedefElement).perform();
 
         //3- “Drop here” yazisi yerine “Dropped!” oldugunu test edin
         WebElement sonucYaziElementi=driver.findElement(By.xpath("//*[text()='Dropped!']"));
