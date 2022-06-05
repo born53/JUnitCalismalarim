@@ -26,7 +26,7 @@ public class C05_ReadExcel {
         Assert.assertEquals(expectedSatirSayisi,sonSatirIndex+1);
         int kullanilanSatirSayisi=workbook
                 .getSheet("Sayfa2")
-                .getPhysicalNumberOfRows();
+                .getPhysicalNumberOfRows();//kullanilan satir sayisini verir
         int expectedKullanilanSatirsayisi=12;
         Assert.assertEquals(expectedKullanilanSatirsayisi,kullanilanSatirSayisi);
     }

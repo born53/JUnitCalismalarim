@@ -16,7 +16,7 @@ public class C02_WebTables extends TestBase {
         //          ○ Username : manager
         //          ○ Password : Manager1!
         girisYap();
-        //● table( ) metodu oluşturun
+        /*//● table( ) metodu oluşturun
         //          ○ Tüm table body’sinin boyutunu(sutun sayisi) bulun. /tbody
         List<WebElement> sutunBasliklariListesi= driver.findElements(By.xpath("//thead//tr[1]//th"));
         System.out.println("Sutun Sayisi : " + sutunBasliklariListesi.size());
@@ -65,6 +65,17 @@ public class C02_WebTables extends TestBase {
                 sendKeys(Keys.TAB).
                 sendKeys("Manager1!").
                 sendKeys(Keys.ENTER).
-                perform();
+                perform();*/
+    }
+
+    public void girisYap() {
+
+        driver.get("https://www.hotelmycamp.com");
+        driver.findElement(By.linkText("Log in")).click();
+        Actions actions = new Actions(driver);
+        WebElement usarName=driver.findElement(By.id("UserName"));
+        actions.click(usarName).sendKeys("manager").
+                sendKeys(Keys.TAB).sendKeys("Manager1!").
+                sendKeys(Keys.ENTER).perform();
     }
 }

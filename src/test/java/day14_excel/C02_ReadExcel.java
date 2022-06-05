@@ -1,7 +1,6 @@
 package day14_excel;
 
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.ss.usermodel.*;
 import org.junit.Test;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -19,6 +18,13 @@ public class C02_ReadExcel {
         //11. Worksheet objesi olusturun workbook.getSheetAt(index)
         //12. Row objesi olusturun sheet.getRow(index)
         //13. Cell objesi olusturun row.getCell(index)
+       /* Sheet sheet= workbook.getSheet("Sayfa1");//workbook kaydettikten sonra sayfa1 gidiyoruz
+        //12. Row objesi olusturun sheet.getRow(index)
+        Row row= sheet.getRow(3);//satira gider
+        //13. Cell objesi olusturun row.getCell(index)
+        Cell cell=row.getCell(3);//cell(sutundiyoruz ama selnyumda sutun yok)*/
+
+       //11.12.13. sorularini yukardakinin daha kisasi asagidaki gibidir
         String actualData= workbook
                 .getSheet("Sayfa1")
                 .getRow(3)
